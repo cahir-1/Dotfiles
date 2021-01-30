@@ -1,0 +1,60 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "cyan bold"
+
+[character]
+success_symbol = "[ ❯](bold blue) "
+error_symbol = "[ ❯](bold blue) "
+
+[git_branch]
+format = " [$symbol$branch]($style) "
+symbol = " "
+always_show_remote = true
+style = "bold #FF92C2"
+
+[git_commit]
+disabled = true
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count} "
+behind = "🐢 ×${count} "
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
+untracked = "🛤️  ×${count} "
+stashed = "📦 " 
+modified = "📝 ×${count} "
+staged = "🗃️  ×${count} "
+renamed = "📛 ×${count} "
+deleted = "🗑️  ×${count} "
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+[git_state]
+rebase = "REBASING"
+merge =	"MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style =	"bold yellow"
+disabled = false
+
+[time]
+disabled = true
+
+[username]
+disabled = false
+show_always = true
+style_user = "bold underline #c22aef"
+style_root = "bold red"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
