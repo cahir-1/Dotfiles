@@ -87,94 +87,45 @@ dynamic_padding: false
 #history: 10000
 # Scrolling distance multiplier.
 #multiplier: 3
-# Font configuration
-#font:
-# Normal (roman) font face
-#normal:
-# Font family
-#
-# Default:
-#   - (macOS) Menlo
-#   - (Linux/BSD) monospace
-#   - (Windows) Consolas
-#family: monospace
-# The `style` can be specified to pick a specific face.
-#style: Regular
-# Bold font face
-#bold:
-# Font family
-#
-# If the bold family is not specified, it will fall back to the
-# value specified for the normal font.
-#family: monospace
-# The `style` can be specified to pick a specific face.
-#style: Bold
-# Italic font face
-#italic:
-# Font family
-#
-# If the italic family is not specified, it will fall back to the
-# value specified for the normal font.
-#family: monospace
-# The `style` can be specified to pick a specific face.
-#style: Italic
-# Bold italic font face
-#bold_italic:
-# Font family
-#
-# If the bold italic family is not specified, it will fall back to the
-# value specified for the normal font.
-#family: monospace
-# The `style` can be specified to pick a specific face.
-#style: Bold Italic
-# Point size
-#size: 11.0
-# Offset is the extra space around each character. `offset.y` can be thought
-# of as modifying the line spacing, and `offset.x` as modifying the letter
-# spacing.
-#offset:
-#  x: 0
-#  y: 0
-# Glyph offset determines the locations of the glyphs within their cells with
-# the default being at the bottom. Increasing `x` moves the glyph to the
-# right, increasing `y` moves the glyph upward.
-#glyph_offset:
-#  x: 0
-#  y: 0
-# Thin stroke font rendering (macOS only)
-#
-# Thin strokes are suitable for retina displays, but for non-retina screens
-# it is recommended to set `use_thin_strokes` to `false`.
-#use_thin_strokes: true
+
+
+
+font:
+  normal: 
+    family: JetBrains Mono 
+    style: Regular
+
+    bold:
+    family: monospace
+    style: Bold
+
+    italic:
+    family: monospace
+    style: Italic
+
+    bold_italic:
+    family: monospace
+    style: Bold Italic
+
+  size: 15
+
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+
+  draw_bold_text_with_bright_colors: false
+
 # Colors (Tomorrow Night)
 #colors:
 # Default colors
-#primary:
+
+  #primary:
 #  background: '#1d1f21'
 #  foreground: '#c5c8c6'
 # Bright and dim foreground colors
-#
-# The dimmed foreground color is calculated automatically if it is not
-# present. If the bright foreground color is not set, or
-# `draw_bold_text_with_bright_colors` is `false`, the normal foreground
-# color will be used.
-#dim_foreground: '#828482'
-#bright_foreground: '#eaeaea'
-# Cursor colors
-#
-# Colors which should be used to draw the terminal cursor.
-#
-# Allowed values are CellForeground and CellBackground, which reference the
-# affected cell, or hexadecimal colors like #ff00ff.
-#cursor:
-#  text: CellBackground
-#  cursor: CellForeground
+
 # Vi mode cursor colors
-#
+
 # Colors for the cursor when the vi mode is active.
-#
+
 # Allowed values are CellForeground and CellBackground, which reference the
 # affected cell, or hexadecimal colors like #ff00ff.
 #vi_mode_cursor:
@@ -277,13 +228,14 @@ dynamic_padding: false
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+background_opacity: 0.82
 #selection:
 # This string contains all characters that are used as separators for
 # "semantic words" in Alacritty.
 #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 # When set to `true`, selected text will be copied to the primary clipboard.
-save_to_clipboard: false
+save_to_clipboard: true 
+
 #cursor:
 # Cursor style
 #style:
@@ -676,8 +628,7 @@ hide_when_typing: true
 #- { key: C,              mods: Control|Shift,                   action: Copy             }
 #- { key: F,              mods: Control|Shift, mode: ~Search,    action: SearchForward    }
 #- { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
-#- { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
-#- { key: Insert,         mods: Shift,                           action: PasteSelection   }
+#- { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   } - { key: Insert,         mods: Shift,                           action: PasteSelection   }
 #- { key: Key0,           mods: Control,                         action: ResetFontSize    }
 #- { key: Equals,         mods: Control,                         action: IncreaseFontSize }
 #- { key: Plus,           mods: Control,                         action: IncreaseFontSize }
@@ -726,27 +677,27 @@ hide_when_typing: true
 colors:
   # Default colors
   primary:
-    background: '0x1a1c1d'
-    foreground: '0xc5c8c6'
+    background: '0x1a1c1c'
+    foreground: '0xc5c8c5'
 
   # Normal colors
   normal:
-    black:   '0x1d1f21'
-    red:     '0xdf0a0a'
-    green:   '0x26d103'
-    yellow:  '0xff49eb'
-    blue:    '0x15aefb'
-    magenta: '0xc22aef'
-    cyan:    '0x30baff'
-    white:   '0xc5c8c6'
+    black:   '0x1d1f20'
+    red:     '0xdf0a09'
+    green:   '0x26d102'
+    yellow:  '0xf0c674'
+    blue:    '0x30bafe' 
+    magenta: '0xbf5ddc'
+    cyan:    '0x30bafe'
+    white:   '0xc5c8c5'
 
   # Bright colors
   bright:
-    black:   '0x828282'
-    red:     '0xdf0a0a'
-    green:   '0x26d103'
-    yellow:  '0xff49eb'
-    blue:    '0x15aefb'
-    magenta: '0xc22aef'
-    cyan:    '0x30baff'
-    white:   '0xffffff'
+    black:   '0x828281'
+    red:     '0xdf0a09'
+    green:   '0x26d102'
+    yellow:  '0xf0c674'
+    blue:    '0x105996'
+    magenta: '0xbf5ddc'
+    cyan:    '0x30bafe'
+    white:   '0xfffffe'

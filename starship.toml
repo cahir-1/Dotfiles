@@ -1,39 +1,40 @@
 add_newline = false
 
 [line_break]
-disabled = true
+disabled = true 
+
+[character]
+#format ""
+success_symbol = "[> ](cyan)"
+error_symbol = "[> ](cyan)"
+use_symbol_for_status = true
+style = "bold cyan"
+disabled = false 
 
 [directory]
 truncation_length = 3
 truncate_to_repo = true
 style = "cyan bold"
-
-[character]
-success_symbol = "[ ❯](bold blue) "
-error_symbol = "[ ❯](bold blue) "
+disabled = false
 
 [git_branch]
-format = " [$symbol$branch]($style) "
+format = " [$symbol$branch]($style)  "
 symbol = " "
 always_show_remote = true
 style = "bold #FF92C2"
+disabled = false
 
 [git_commit]
 disabled = true
 
 [git_status]
-conflicted = "⚔️ "
-ahead = "🏎️ 💨 ×${count} "
-behind = "🐢 ×${count} "
-diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
-untracked = "🛤️  ×${count} "
-stashed = "📦 " 
-modified = "📝 ×${count} "
-staged = "🗃️  ×${count} "
-renamed = "📛 ×${count} "
-deleted = "🗑️  ×${count} "
+conflicted = "x "
+ahead = "^ "
+behind = "/ "
+modified ="× "
 style = "bright-white"
-format = "$all_status$ahead_behind"
+format = "$ahead_behind$modified"
+disabled = true
 
 [git_state]
 rebase = "REBASING"
@@ -48,6 +49,9 @@ disabled = false
 
 [time]
 disabled = true
+
+[cmd_duration]
+disabled = true 
 
 [username]
 disabled = false
